@@ -26,8 +26,20 @@
                                     <action selector="touchbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCL-84-CaL"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLb-mN-rIk">
+                                <rect key="frame" x="129" y="229" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="cJt-zG-2XM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="M4E-s2-hwO"/>
+                                </connections>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKN-Fh-yl9">
-                                <rect key="frame" x="166" y="252" width="42" height="21"/>
+                                <rect key="frame" x="166" y="286" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -40,6 +52,7 @@
                     <connections>
                         <outlet property="btn" destination="FuK-qZ-4dj" id="cwv-ob-t9V"/>
                         <outlet property="lbl" destination="KKN-Fh-yl9" id="Tkq-fM-4qo"/>
+                        <outlet property="txt" destination="kLb-mN-rIk" id="Geo-JK-Hyg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

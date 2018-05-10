@@ -8,23 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController , UITextFieldDelegate{
     
     var cont : Int = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        txt.resignFirstResponder() // toglie l'autofocus
+        return true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    @IBOutlet weak var txt: UITextField!
     @IBOutlet weak var btn: UIButton!//referena all 'oggetto
     @IBOutlet weak var lbl: UILabel!//collegare con mouse + CTRL
+    
+    
     
     //referenza al'azione,
     @IBAction func touchbtn(_ sender: Any) {
@@ -33,6 +30,7 @@ class ViewController: UIViewController {
         //I modi sottostanti fanno la stessa cosa, con sintassi diversa
         lbl.text = String(format: "%d", cont)//Creo una nuova stringa con formato di visualizzazione; il %@ è il formto di  una stringa
         lbl.text = "\(cont)"//creo un stringa, e gli butto dentro il valore del cont.
+        view.endEditing(true)//andiamo a rimuovere il focus da tutti i textfields.
         
     }
     
